@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block styles%}
+{{ super() }}
+
+<link href="https://fonts.googleapis.com/css?family=Ariel&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row" style="background: black">
+        <h1 class="text-center" style="color: white;"><strong><em>NEWS SOURCES</em></strong></h1>
+        {% for source in sources %}
+        <div class="col-md-4" style="background-color: black">
+            <div class="panel panel-default">
+                <h2 class="panel-heading" style="font-size: 15px;"><strong>Source: {{ source.name }}</strong></h2>
+                <div class="panel-body">
+                    <p style="font-size: 15px;color: black;">Source description:
+                        {{ source.description | truncate(60) }}</p>
+                    <p style="font-size: 15px;color: black;">News Category: {{ source.category }} </p>
+                    <a href="articles/{{ source.id }}" class="btn btn-primary">View Articles</a>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
