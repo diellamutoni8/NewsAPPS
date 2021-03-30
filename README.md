@@ -36,5 +36,5 @@ export NEWS_API_KEY=<your-api-key>
 5. Css
 
 ### License
-This project is license  by MIT for more information visit [LICENSE.md](LICENSE.md) .
+This project is license  by MIT for more information visit [LICENSE.md](LICENSE.md).
 
